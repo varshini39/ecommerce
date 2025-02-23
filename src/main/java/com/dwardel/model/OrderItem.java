@@ -1,4 +1,4 @@
-package com.ecommerce.delivery.model;
+package com.dwardel.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

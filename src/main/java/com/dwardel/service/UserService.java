@@ -1,8 +1,8 @@
-package com.ecommerce.delivery.service;
+package com.dwardel.service;
 
-import com.ecommerce.delivery.dto.UserDTO;
-import com.ecommerce.delivery.model.User;
-import com.ecommerce.delivery.repository.UserRepository;
+import com.dwardel.dto.UserDTO;
+import com.dwardel.model.User;
+import com.dwardel.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

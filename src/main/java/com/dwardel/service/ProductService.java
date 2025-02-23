@@ -1,7 +1,7 @@
-package com.ecommerce.delivery.service;
+package com.dwardel.service;
 
-import com.ecommerce.delivery.model.Product;
-import com.ecommerce.delivery.repository.ProductRepository;
+import com.dwardel.model.Product;
+import com.dwardel.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

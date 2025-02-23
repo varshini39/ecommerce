@@ -1,4 +1,4 @@
-package com.ecommerce.delivery.model;
+package com.dwardel.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,21 +16,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "products")
-public class Product {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
-
-    private String description;
+    @Column(unique = true, nullable = false)
+    private String email;
 
     @Column(nullable = false)
-    private Double price;
+    private String password;
 
-    @Column(nullable = false)
-    private Integer stockQuantity;
 }

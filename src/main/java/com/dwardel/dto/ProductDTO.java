@@ -1,4 +1,4 @@
-package com.ecommerce.delivery.dto;
+package com.dwardel.dto;
 
 import lombok.Data;
 

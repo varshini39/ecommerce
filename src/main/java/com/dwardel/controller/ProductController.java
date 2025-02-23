@@ -1,7 +1,7 @@
-package com.ecommerce.delivery.controller;
+package com.dwardel.controller;
 
-import com.ecommerce.delivery.model.Product;
-import com.ecommerce.delivery.service.ProductService;
+import com.dwardel.model.Product;
+import com.dwardel.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
