@@ -1,6 +1,6 @@
 # ecommerce
 
-1. You can generate a Spring Boot project using Spring Initializr (https://start.spring.io/)<br>
+1. Generate a Spring Boot project using Spring Initializer (https://start.spring.io/)<br>
 Project: Maven<br>
 Java: OpenJDK 21<br>
 Dependencies to Include:<br>
