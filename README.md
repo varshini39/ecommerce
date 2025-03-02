@@ -36,6 +36,9 @@ spring.datasource.hikari.idle-timeout=30000 -> Closes idle connections after 30 
 spring.datasource.hikari.connection-timeout=20000 -> Max wait time for a connection<br>
 spring.datasource.hikari.max-lifetime=1800000 -> Max connection lifetime
 
+6. Added "querydsl" library for fetching data from DB without writing queries. Mainly used for complicated joins and 
+   criteria. It generates Q-Classes for each entity and we would use it to fetch the data.
+
 
 
 
