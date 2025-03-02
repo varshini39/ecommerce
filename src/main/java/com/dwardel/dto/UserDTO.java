@@ -10,4 +10,7 @@ public class UserDTO {
 
     public UserDTO(Long id, String email) {
     }
+
+    public UserDTO(Long id, String email, String address) {
+    }
 }

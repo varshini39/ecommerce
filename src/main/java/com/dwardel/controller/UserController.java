@@ -39,7 +39,7 @@ public class UserController {
 
     // Create a new user
     @GetMapping("/{id}/address")
-    public List<UserDTO> getUserWithAddress(@RequestBody User user) {
-        return userService.getUserWithAddress(user);
+    public List<UserDTO> getUserWithAddress(@PathVariable Long id) {
+        return userService.getUserWithAddress(id);
     }
 }

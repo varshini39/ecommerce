@@ -69,7 +69,7 @@ public class UserService {
                 .fetch();
     }
 
-    public List<UserDTO> getUserWithAddress(User user) {
+    public List<UserDTO> getUserWithAddress(Long id) {
         QUser qUser = QUser.user;
         QUserAddress qUserAddress = QUserAddress.userAddress;
 
@@ -82,7 +82,7 @@ public class UserService {
                 ))
                 .from(qUser)
                 .leftJoin(qUserAddress).on(qUserAddress.user.eq(qUser))
-                .where(qUser.id.eq(user.getId()))
+                .where(qUser.id.eq(id))
                 .fetch();
     }
 }
