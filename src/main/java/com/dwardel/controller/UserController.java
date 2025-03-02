@@ -38,7 +38,7 @@ public class UserController {
     }
 
     // Create a new user
-    @GetMapping
+    @GetMapping("/{id}/address")
     public List<UserDTO> getUserWithAddress(@RequestBody User user) {
         return userService.getUserWithAddress(user);
     }
