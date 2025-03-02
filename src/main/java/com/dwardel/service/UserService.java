@@ -5,6 +5,7 @@ import com.dwardel.model.QUser;
 import com.dwardel.model.QUserAddress;
 import com.dwardel.model.User;
 import com.dwardel.repository.UserRepository;
+import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQuery;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -65,6 +66,23 @@ public class UserService {
                 .select(qUser)
                 .from(qUser)
                 .leftJoin(qUserAddress).on(qUserAddress.user.eq(qUser))
+                .fetch();
+    }
+
+    public List<UserDTO> getUserWithAddress(User user) {
+        QUser qUser = QUser.user;
+        QUserAddress qUserAddress = QUserAddress.userAddress;
+
+        return new JPAQuery<>(entityManager)
+                .select(Projections.constructor(
+                        UserDTO.class,
+                        qUser.id,
+                        qUser.email,
+                        qUserAddress.address
+                ))
+                .from(qUser)
+                .leftJoin(qUserAddress).on(qUserAddress.user.eq(qUser))
+                .where(qUser.id.eq(user.getId()))
                 .fetch();
     }
 }

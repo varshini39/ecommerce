@@ -36,4 +36,10 @@ public class UserController {
     public UserDTO createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
+
+    // Create a new user
+    @GetMapping
+    public List<UserDTO> getUserWithAddress(@RequestBody User user) {
+        return userService.getUserWithAddress(user);
+    }
 }
