@@ -94,4 +94,21 @@
                              constraintName="uq_place_id"/>
     </changeSet>
 
+    <changeSet id="6" author="Varshu">
+        <addNotNullConstraint tableName="user_address" columnName="address" columnDataType="TEXT"/>
+        <addNotNullConstraint tableName="user_address" columnName="location" columnDataType="GEOMETRY(Point,4326)"/>
+        <addNotNullConstraint tableName="user_address" columnName="place_id" columnDataType="VARCHAR(255)"/>
+        <addNotNullConstraint tableName="user_address" columnName="place_generated_time" columnDataType="TIMESTAMP"/>
+
+        <addColumn tableName="users">
+            <column name="phone_number" type="VARCHAR(15)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="7" author="Varshu">
+        <modifyDataType tableName="user_address" columnName="place_id" newDataType="VARCHAR(300)"/>
+    </changeSet>
+
 </databaseChangeLog>

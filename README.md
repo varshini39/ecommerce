@@ -11,7 +11,8 @@ Spring Security (for authentication/authorization)<br>
 Lombok (to reduce boilerplate code)<br>
 Spring Boot DevTools (for hot reloads during development - doesn't need to restart the server)<br>
 
-2. Liquibase library is used to manage DDL operations
+2. Liquibase library is used to manage DDL operations.<br>
+Added liquibase.properties file for debugging purpose - to get change logs
 
 3. File structure:<br>
 controller/ -> REST Controllers<br>
